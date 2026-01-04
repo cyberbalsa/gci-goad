@@ -1,0 +1,38 @@
+# Example configuration for GOAD OpenStack deployment
+# Copy this file to terraform.tfvars and customize as needed
+
+# Number of complete GOAD instances to deploy (each has 5 Windows VMs)
+# For example:
+#   goad_instance_count = 1   -> 5 Windows VMs (1 GOAD lab)
+#   goad_instance_count = 2   -> 10 Windows VMs (2 GOAD labs)
+#   goad_instance_count = 10  -> 50 Windows VMs (10 GOAD labs)
+#   goad_instance_count = 30  -> 150 Windows VMs (30 GOAD labs)
+goad_instance_count = 30
+
+# Image names (use: openstack image list)
+# Windows Server 2019 is used for DC01, DC02, and SRV02
+windows_server_2019_image = "WindowsServer2019"
+# Windows Server 2016 is used for DC03 and SRV03
+windows_server_2016_image = "WindowsServer2016"
+ubuntu_image_name         = "ubuntu-noble-server"
+kali_image_name           = "Kali2025"
+
+# Flavor names (use: openstack flavor list)
+# Domain Controllers need more resources
+dc_flavor_name     = "medium.6gb"  # 6GB RAM, 2 VCPUs
+server_flavor_name = "medium.6gb"  # 6GB RAM, 2 VCPUs
+linux_flavor_name  = "medium"      # 4GB RAM, 2 VCPUs
+
+# SSH keypair name (use: openstack keypair list)
+# REQUIRED: Set this to your OpenStack SSH keypair name
+keypair = "CHANGEME"
+
+# External network for floating IPs
+external_network = "MAIN-NAT"
+
+# Enable/disable floating IPs for external access
+enable_floating_ips = true
+
+# Disk sizes (in GB)
+windows_disk_size = 80
+linux_disk_size   = 50
