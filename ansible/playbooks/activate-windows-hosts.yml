@@ -1,0 +1,10 @@
+---
+# Wrapper playbook to activate Windows hosts using the activate_windows role
+# This should be run BEFORE GOAD deployment to ensure Windows VMs are activated
+#
+# Usage:
+#   ansible-playbook playbooks/activate-windows-hosts.yml
+#   ansible-playbook playbooks/activate-windows-hosts.yml --limit goad-1-dc01,goad-1-dc02
+
+- name: Activate All Windows Hosts Before GOAD Deployment
+  import_playbook: ../roles/activate_windows.yml

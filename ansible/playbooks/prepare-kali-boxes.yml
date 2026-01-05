@@ -1,0 +1,39 @@
+---
+# Playbook to prepare Kali boxes for penetration testing
+# This sets up pentester user, RDP access, and generates unique passwords
+
+- name: Prepare Kali Pentesting Boxes
+  hosts: kali_boxes
+  gather_facts: true
+  become: true
+
+  pre_tasks:
+    - name: Wait for system to be ready
+      wait_for_connection:
+        timeout: 300
+
+    - name: Gather facts
+      setup:
+
+  roles:
+    - kali_setup
+
+  post_tasks:
+    - name: Verify pentester user exists
+      command: id pentester
+      register: pentester_check
+      changed_when: false
+      failed_when: false
+
+    - name: Verify xrdp is running
+      systemd:
+        name: xrdp
+      register: xrdp_check
+      changed_when: false
+      failed_when: false
+
+    - name: Display verification results
+      debug:
+        msg:
+          - "Pentester user: {{ 'OK' if pentester_check.rc == 0 else 'FAILED' }}"
+          - "xrdp service: {{ 'OK' if xrdp_check.status.ActiveState == 'active' else 'FAILED' }}"

@@ -5,15 +5,10 @@
 variable "goad_instance_count" {
   type        = number
   default     = 1
-  description = "Number of complete GOAD lab instances to deploy (each has 5 Windows VMs)"
+  description = "Number of complete GOAD lab instances to deploy (each has 5 Windows VMs + 1 Ubuntu + 1 Kali)"
 }
 
 # Network configuration
-variable "mgmt_subnet_cidr" {
-  type    = string
-  default = "10.200.0.0/24"
-}
-
 variable "external_network" {
   type    = string
   default = "MAIN-NAT"
@@ -55,10 +50,16 @@ variable "server_flavor_name" {
   description = "Flavor for member servers (6GB RAM, 2 VCPUs recommended)"
 }
 
-variable "linux_flavor_name" {
-  type    = string
-  default = "medium"
-  description = "Flavor for Ubuntu and Kali boxes (4GB RAM, 2 VCPUs)"
+variable "deploy_flavor_name" {
+  type        = string
+  default     = "medium"
+  description = "Flavor for Ubuntu deployment boxes (4GB RAM, 2 VCPUs)"
+}
+
+variable "kali_flavor_name" {
+  type        = string
+  default     = "large"
+  description = "Flavor for Kali boxes (8GB RAM, 4 VCPUs)"
 }
 
 # SSH keypair (must be created in OpenStack first)

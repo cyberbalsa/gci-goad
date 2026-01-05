@@ -365,6 +365,11 @@ Else {
 }
 Write-VerboseLog "PS Remoting has been successfully configured for Ansible."
 
+# Rename the primary network adapter to "Ethernet"
+Write-Verbose "Renaming network adapter to Ethernet"
+Get-NetAdapter | Where-Object {$_.Status -eq "Up"} | Select-Object -First 1 | Rename-NetAdapter -NewName "Ethernet" -ErrorAction SilentlyContinue
+Write-ProgressLog "Network adapter renamed to Ethernet."
+
 secedit /export /cfg c:\secpol.cfg
 (gc C:\secpol.cfg).replace("PasswordComplexity = 1", "PasswordComplexity = 0") | Out-File C:\secpol.cfg
 secedit /configure /db c:\windows\security\local.sdb /cfg c:\secpol.cfg /areas SECURITYPOLICY

@@ -1,0 +1,36 @@
+---
+# Playbook to prepare Ubuntu deployment boxes for GOAD deployment
+# This sets up all prerequisites and installs GOAD on each deployment box
+
+- name: Prepare GOAD Deployment Boxes
+  hosts: deployment_boxes
+  gather_facts: true
+  become: true
+
+  pre_tasks:
+    - name: Wait for system to be ready
+      wait_for_connection:
+        timeout: 300
+
+    - name: Gather facts
+      setup:
+
+  roles:
+    - goad_deploy_box
+
+  post_tasks:
+    - name: Verify GOAD installation
+      stat:
+        path: /opt/goad/goad.py
+      register: goad_check
+
+    - name: Verify fake terraform
+      command: /usr/local/bin/terraform version
+      register: tf_check
+      changed_when: false
+
+    - name: Display verification results
+      debug:
+        msg:
+          - "GOAD installed: {{ goad_check.stat.exists }}"
+          - "Terraform stub: {{ 'OK' if tf_check.rc == 0 else 'FAILED' }}"

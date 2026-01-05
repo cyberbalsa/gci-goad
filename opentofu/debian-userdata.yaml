@@ -3,6 +3,7 @@
 package_reboot_if_required: true
 package_update: true
 package_upgrade: true
+ssh_pwauth: true
 
 packages:
   - curl
@@ -16,25 +17,12 @@ packages:
   - net-tools
   - htop
   - xrdp
-
-
-# Create a basic welcome message
-write_files:
-  - path: /welcome.txt
-    content: |
-      Welcome to CDT Debian Trixie VM!
-      This is a basic setup that you can customize.
-      
-      Some useful commands:
-      - htop: system monitor
-      - ip addr: check IP addresses
-      - systemctl status: check services
-    owner: debian:debian
-    permissions: '0644'
+  - git
 
 # Run commands after boot
 runcmd:
   - systemctl enable --now xrdp
+  - systemctl enable --now ssh
   - echo "CDT Debian VM setup completed" >> /var/log/cdt-setup.log
   - date >> /var/log/cdt-setup.log
 

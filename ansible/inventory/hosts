@@ -1,0 +1,339 @@
+[deployment_boxes]
+goad-1-ubuntu-deploy ansible_host=100.65.4.86 ansible_user=cyberrange network_id=1
+goad-2-ubuntu-deploy ansible_host=100.65.2.206 ansible_user=cyberrange network_id=2
+goad-3-ubuntu-deploy ansible_host=100.65.5.51 ansible_user=cyberrange network_id=3
+goad-4-ubuntu-deploy ansible_host=100.65.4.113 ansible_user=cyberrange network_id=4
+goad-5-ubuntu-deploy ansible_host=100.65.3.67 ansible_user=cyberrange network_id=5
+goad-6-ubuntu-deploy ansible_host=100.65.3.193 ansible_user=cyberrange network_id=6
+goad-7-ubuntu-deploy ansible_host=100.65.5.214 ansible_user=cyberrange network_id=7
+goad-8-ubuntu-deploy ansible_host=100.65.4.250 ansible_user=cyberrange network_id=8
+goad-9-ubuntu-deploy ansible_host=100.65.6.99 ansible_user=cyberrange network_id=9
+goad-10-ubuntu-deploy ansible_host=100.65.4.146 ansible_user=cyberrange network_id=10
+goad-11-ubuntu-deploy ansible_host=100.65.3.176 ansible_user=cyberrange network_id=11
+goad-12-ubuntu-deploy ansible_host=100.65.4.21 ansible_user=cyberrange network_id=12
+goad-13-ubuntu-deploy ansible_host=100.65.5.190 ansible_user=cyberrange network_id=13
+goad-14-ubuntu-deploy ansible_host=100.65.6.56 ansible_user=cyberrange network_id=14
+goad-15-ubuntu-deploy ansible_host=100.65.4.196 ansible_user=cyberrange network_id=15
+goad-16-ubuntu-deploy ansible_host=100.65.5.226 ansible_user=cyberrange network_id=16
+goad-17-ubuntu-deploy ansible_host=100.65.3.153 ansible_user=cyberrange network_id=17
+goad-18-ubuntu-deploy ansible_host=100.65.2.58 ansible_user=cyberrange network_id=18
+goad-19-ubuntu-deploy ansible_host=100.65.3.36 ansible_user=cyberrange network_id=19
+goad-20-ubuntu-deploy ansible_host=100.65.5.25 ansible_user=cyberrange network_id=20
+goad-21-ubuntu-deploy ansible_host=100.65.6.129 ansible_user=cyberrange network_id=21
+goad-22-ubuntu-deploy ansible_host=100.65.3.116 ansible_user=cyberrange network_id=22
+goad-23-ubuntu-deploy ansible_host=100.65.5.211 ansible_user=cyberrange network_id=23
+goad-24-ubuntu-deploy ansible_host=100.65.4.29 ansible_user=cyberrange network_id=24
+goad-25-ubuntu-deploy ansible_host=100.65.4.80 ansible_user=cyberrange network_id=25
+goad-26-ubuntu-deploy ansible_host=100.65.4.59 ansible_user=cyberrange network_id=26
+goad-27-ubuntu-deploy ansible_host=100.65.4.60 ansible_user=cyberrange network_id=27
+goad-28-ubuntu-deploy ansible_host=100.65.3.88 ansible_user=cyberrange network_id=28
+goad-29-ubuntu-deploy ansible_host=100.65.5.124 ansible_user=cyberrange network_id=29
+goad-30-ubuntu-deploy ansible_host=100.65.6.104 ansible_user=cyberrange network_id=30
+goad-31-ubuntu-deploy ansible_host=100.65.5.40 ansible_user=cyberrange network_id=31
+goad-32-ubuntu-deploy ansible_host=100.65.4.24 ansible_user=cyberrange network_id=32
+goad-33-ubuntu-deploy ansible_host=100.65.5.247 ansible_user=cyberrange network_id=33
+goad-34-ubuntu-deploy ansible_host=100.65.5.206 ansible_user=cyberrange network_id=34
+goad-35-ubuntu-deploy ansible_host=100.65.3.5 ansible_user=cyberrange network_id=35
+goad-36-ubuntu-deploy ansible_host=100.65.6.20 ansible_user=cyberrange network_id=36
+goad-37-ubuntu-deploy ansible_host=100.65.3.69 ansible_user=cyberrange network_id=37
+goad-38-ubuntu-deploy ansible_host=100.65.4.190 ansible_user=cyberrange network_id=38
+goad-39-ubuntu-deploy ansible_host=100.65.4.84 ansible_user=cyberrange network_id=39
+goad-40-ubuntu-deploy ansible_host=100.65.3.33 ansible_user=cyberrange network_id=40
+
+[deployment_boxes:vars]
+ansible_python_interpreter=/usr/bin/python3
+ansible_ssh_common_args='-o StrictHostKeyChecking=no -J sshjump@ssh.cyberrange.rit.edu'
+ansible_password=Cyberrange123!
+
+# Kali Pentesting Boxes
+[kali_boxes]
+goad-1-kali ansible_host=100.65.3.204 network_id=1
+goad-2-kali ansible_host=100.65.4.138 network_id=2
+goad-3-kali ansible_host=100.65.2.143 network_id=3
+goad-4-kali ansible_host=100.65.6.85 network_id=4
+goad-5-kali ansible_host=100.65.5.134 network_id=5
+goad-6-kali ansible_host=100.65.5.143 network_id=6
+goad-7-kali ansible_host=100.65.3.0 network_id=7
+goad-8-kali ansible_host=100.65.2.23 network_id=8
+goad-9-kali ansible_host=100.65.6.159 network_id=9
+goad-10-kali ansible_host=100.65.3.206 network_id=10
+goad-11-kali ansible_host=100.65.2.71 network_id=11
+goad-12-kali ansible_host=100.65.4.203 network_id=12
+goad-13-kali ansible_host=100.65.5.48 network_id=13
+goad-14-kali ansible_host=100.65.3.224 network_id=14
+goad-15-kali ansible_host=100.65.2.178 network_id=15
+goad-16-kali ansible_host=100.65.5.62 network_id=16
+goad-17-kali ansible_host=100.65.3.107 network_id=17
+goad-18-kali ansible_host=100.65.2.201 network_id=18
+goad-19-kali ansible_host=100.65.2.161 network_id=19
+goad-20-kali ansible_host=100.65.3.203 network_id=20
+goad-21-kali ansible_host=100.65.4.54 network_id=21
+goad-22-kali ansible_host=100.65.4.12 network_id=22
+goad-23-kali ansible_host=100.65.3.99 network_id=23
+goad-24-kali ansible_host=100.65.6.151 network_id=24
+goad-25-kali ansible_host=100.65.4.17 network_id=25
+goad-26-kali ansible_host=100.65.6.233 network_id=26
+goad-27-kali ansible_host=100.65.2.95 network_id=27
+goad-28-kali ansible_host=100.65.3.117 network_id=28
+goad-29-kali ansible_host=100.65.2.169 network_id=29
+goad-30-kali ansible_host=100.65.6.0 network_id=30
+goad-31-kali ansible_host=100.65.2.18 network_id=31
+goad-32-kali ansible_host=100.65.5.219 network_id=32
+goad-33-kali ansible_host=100.65.6.243 network_id=33
+goad-34-kali ansible_host=100.65.5.16 network_id=34
+goad-35-kali ansible_host=100.65.3.24 network_id=35
+goad-36-kali ansible_host=100.65.6.107 network_id=36
+goad-37-kali ansible_host=100.65.2.187 network_id=37
+goad-38-kali ansible_host=100.65.3.146 network_id=38
+goad-39-kali ansible_host=100.65.6.41 network_id=39
+goad-40-kali ansible_host=100.65.5.91 network_id=40
+
+[kali_boxes:vars]
+ansible_python_interpreter=/usr/bin/python3
+ansible_ssh_common_args='-o StrictHostKeyChecking=no -J sshjump@ssh.cyberrange.rit.edu'
+ansible_user=cyberrange
+ansible_password=Cyberrange123!
+
+# Windows Domain Controllers
+[windows_dc01]
+goad-1-dc01 ansible_host=100.65.5.175 network_id=1
+goad-2-dc01 ansible_host=100.65.6.200 network_id=2
+goad-3-dc01 ansible_host=100.65.3.180 network_id=3
+goad-4-dc01 ansible_host=100.65.2.62 network_id=4
+goad-5-dc01 ansible_host=100.65.2.57 network_id=5
+goad-6-dc01 ansible_host=100.65.4.158 network_id=6
+goad-7-dc01 ansible_host=100.65.6.220 network_id=7
+goad-8-dc01 ansible_host=100.65.5.57 network_id=8
+goad-9-dc01 ansible_host=100.65.3.48 network_id=9
+goad-10-dc01 ansible_host=100.65.2.80 network_id=10
+goad-11-dc01 ansible_host=100.65.2.155 network_id=11
+goad-12-dc01 ansible_host=100.65.2.216 network_id=12
+goad-13-dc01 ansible_host=100.65.5.76 network_id=13
+goad-14-dc01 ansible_host=100.65.4.50 network_id=14
+goad-15-dc01 ansible_host=100.65.2.151 network_id=15
+goad-16-dc01 ansible_host=100.65.3.149 network_id=16
+goad-17-dc01 ansible_host=100.65.4.234 network_id=17
+goad-18-dc01 ansible_host=100.65.5.170 network_id=18
+goad-19-dc01 ansible_host=100.65.4.214 network_id=19
+goad-20-dc01 ansible_host=100.65.3.31 network_id=20
+goad-21-dc01 ansible_host=100.65.4.106 network_id=21
+goad-22-dc01 ansible_host=100.65.4.142 network_id=22
+goad-23-dc01 ansible_host=100.65.5.55 network_id=23
+goad-24-dc01 ansible_host=100.65.3.92 network_id=24
+goad-25-dc01 ansible_host=100.65.2.225 network_id=25
+goad-26-dc01 ansible_host=100.65.2.239 network_id=26
+goad-27-dc01 ansible_host=100.65.3.66 network_id=27
+goad-28-dc01 ansible_host=100.65.3.10 network_id=28
+goad-29-dc01 ansible_host=100.65.2.127 network_id=29
+goad-30-dc01 ansible_host=100.65.5.167 network_id=30
+goad-31-dc01 ansible_host=100.65.6.217 network_id=31
+goad-32-dc01 ansible_host=100.65.2.36 network_id=32
+goad-33-dc01 ansible_host=100.65.4.217 network_id=33
+goad-34-dc01 ansible_host=100.65.2.124 network_id=34
+goad-35-dc01 ansible_host=100.65.4.38 network_id=35
+goad-36-dc01 ansible_host=100.65.5.203 network_id=36
+goad-37-dc01 ansible_host=100.65.3.234 network_id=37
+goad-38-dc01 ansible_host=100.65.6.87 network_id=38
+goad-39-dc01 ansible_host=100.65.3.17 network_id=39
+goad-40-dc01 ansible_host=100.65.4.13 network_id=40
+
+[windows_dc02]
+goad-1-dc02 ansible_host=100.65.3.91 network_id=1
+goad-2-dc02 ansible_host=100.65.3.127 network_id=2
+goad-3-dc02 ansible_host=100.65.6.77 network_id=3
+goad-4-dc02 ansible_host=100.65.6.61 network_id=4
+goad-5-dc02 ansible_host=100.65.4.104 network_id=5
+goad-6-dc02 ansible_host=100.65.4.35 network_id=6
+goad-7-dc02 ansible_host=100.65.3.58 network_id=7
+goad-8-dc02 ansible_host=100.65.5.142 network_id=8
+goad-9-dc02 ansible_host=100.65.2.84 network_id=9
+goad-10-dc02 ansible_host=100.65.3.28 network_id=10
+goad-11-dc02 ansible_host=100.65.4.154 network_id=11
+goad-12-dc02 ansible_host=100.65.6.37 network_id=12
+goad-13-dc02 ansible_host=100.65.2.180 network_id=13
+goad-14-dc02 ansible_host=100.65.6.48 network_id=14
+goad-15-dc02 ansible_host=100.65.3.54 network_id=15
+goad-16-dc02 ansible_host=100.65.6.59 network_id=16
+goad-17-dc02 ansible_host=100.65.3.34 network_id=17
+goad-18-dc02 ansible_host=100.65.6.45 network_id=18
+goad-19-dc02 ansible_host=100.65.4.25 network_id=19
+goad-20-dc02 ansible_host=100.65.4.87 network_id=20
+goad-21-dc02 ansible_host=100.65.3.253 network_id=21
+goad-22-dc02 ansible_host=100.65.5.31 network_id=22
+goad-23-dc02 ansible_host=100.65.5.217 network_id=23
+goad-24-dc02 ansible_host=100.65.2.195 network_id=24
+goad-25-dc02 ansible_host=100.65.5.209 network_id=25
+goad-26-dc02 ansible_host=100.65.4.47 network_id=26
+goad-27-dc02 ansible_host=100.65.3.130 network_id=27
+goad-28-dc02 ansible_host=100.65.5.123 network_id=28
+goad-29-dc02 ansible_host=100.65.4.225 network_id=29
+goad-30-dc02 ansible_host=100.65.5.225 network_id=30
+goad-31-dc02 ansible_host=100.65.5.220 network_id=31
+goad-32-dc02 ansible_host=100.65.5.21 network_id=32
+goad-33-dc02 ansible_host=100.65.3.82 network_id=33
+goad-34-dc02 ansible_host=100.65.5.32 network_id=34
+goad-35-dc02 ansible_host=100.65.4.58 network_id=35
+goad-36-dc02 ansible_host=100.65.5.221 network_id=36
+goad-37-dc02 ansible_host=100.65.2.213 network_id=37
+goad-38-dc02 ansible_host=100.65.3.44 network_id=38
+goad-39-dc02 ansible_host=100.65.4.51 network_id=39
+goad-40-dc02 ansible_host=100.65.3.143 network_id=40
+
+[windows_dc03]
+goad-1-dc03 ansible_host=100.65.2.16 network_id=1
+goad-2-dc03 ansible_host=100.65.5.127 network_id=2
+goad-3-dc03 ansible_host=100.65.3.239 network_id=3
+goad-4-dc03 ansible_host=100.65.5.68 network_id=4
+goad-5-dc03 ansible_host=100.65.2.93 network_id=5
+goad-6-dc03 ansible_host=100.65.2.29 network_id=6
+goad-7-dc03 ansible_host=100.65.6.15 network_id=7
+goad-8-dc03 ansible_host=100.65.6.180 network_id=8
+goad-9-dc03 ansible_host=100.65.5.79 network_id=9
+goad-10-dc03 ansible_host=100.65.3.45 network_id=10
+goad-11-dc03 ansible_host=100.65.2.197 network_id=11
+goad-12-dc03 ansible_host=100.65.2.171 network_id=12
+goad-13-dc03 ansible_host=100.65.5.242 network_id=13
+goad-14-dc03 ansible_host=100.65.6.43 network_id=14
+goad-15-dc03 ansible_host=100.65.4.209 network_id=15
+goad-16-dc03 ansible_host=100.65.6.58 network_id=16
+goad-17-dc03 ansible_host=100.65.6.26 network_id=17
+goad-18-dc03 ansible_host=100.65.5.181 network_id=18
+goad-19-dc03 ansible_host=100.65.2.253 network_id=19
+goad-20-dc03 ansible_host=100.65.4.184 network_id=20
+goad-21-dc03 ansible_host=100.65.4.178 network_id=21
+goad-22-dc03 ansible_host=100.65.2.74 network_id=22
+goad-23-dc03 ansible_host=100.65.4.32 network_id=23
+goad-24-dc03 ansible_host=100.65.5.208 network_id=24
+goad-25-dc03 ansible_host=100.65.4.188 network_id=25
+goad-26-dc03 ansible_host=100.65.5.238 network_id=26
+goad-27-dc03 ansible_host=100.65.2.107 network_id=27
+goad-28-dc03 ansible_host=100.65.2.240 network_id=28
+goad-29-dc03 ansible_host=100.65.6.46 network_id=29
+goad-30-dc03 ansible_host=100.65.3.111 network_id=30
+goad-31-dc03 ansible_host=100.65.2.45 network_id=31
+goad-32-dc03 ansible_host=100.65.4.222 network_id=32
+goad-33-dc03 ansible_host=100.65.4.139 network_id=33
+goad-34-dc03 ansible_host=100.65.2.154 network_id=34
+goad-35-dc03 ansible_host=100.65.2.98 network_id=35
+goad-36-dc03 ansible_host=100.65.6.14 network_id=36
+goad-37-dc03 ansible_host=100.65.2.233 network_id=37
+goad-38-dc03 ansible_host=100.65.6.65 network_id=38
+goad-39-dc03 ansible_host=100.65.2.46 network_id=39
+goad-40-dc03 ansible_host=100.65.5.58 network_id=40
+
+# Windows Servers
+[windows_srv02]
+goad-1-srv02 ansible_host=100.65.5.240 network_id=1
+goad-2-srv02 ansible_host=100.65.5.136 network_id=2
+goad-3-srv02 ansible_host=100.65.4.150 network_id=3
+goad-4-srv02 ansible_host=100.65.3.25 network_id=4
+goad-5-srv02 ansible_host=100.65.5.69 network_id=5
+goad-6-srv02 ansible_host=100.65.5.161 network_id=6
+goad-7-srv02 ansible_host=100.65.2.55 network_id=7
+goad-8-srv02 ansible_host=100.65.4.155 network_id=8
+goad-9-srv02 ansible_host=100.65.5.71 network_id=9
+goad-10-srv02 ansible_host=100.65.5.114 network_id=10
+goad-11-srv02 ansible_host=100.65.6.126 network_id=11
+goad-12-srv02 ansible_host=100.65.5.103 network_id=12
+goad-13-srv02 ansible_host=100.65.6.84 network_id=13
+goad-14-srv02 ansible_host=100.65.3.41 network_id=14
+goad-15-srv02 ansible_host=100.65.6.71 network_id=15
+goad-16-srv02 ansible_host=100.65.2.130 network_id=16
+goad-17-srv02 ansible_host=100.65.4.70 network_id=17
+goad-18-srv02 ansible_host=100.65.4.57 network_id=18
+goad-19-srv02 ansible_host=100.65.6.206 network_id=19
+goad-20-srv02 ansible_host=100.65.5.120 network_id=20
+goad-21-srv02 ansible_host=100.65.4.247 network_id=21
+goad-22-srv02 ansible_host=100.65.3.208 network_id=22
+goad-23-srv02 ansible_host=100.65.3.115 network_id=23
+goad-24-srv02 ansible_host=100.65.4.98 network_id=24
+goad-25-srv02 ansible_host=100.65.5.234 network_id=25
+goad-26-srv02 ansible_host=100.65.6.49 network_id=26
+goad-27-srv02 ansible_host=100.65.3.252 network_id=27
+goad-28-srv02 ansible_host=100.65.4.78 network_id=28
+goad-29-srv02 ansible_host=100.65.6.234 network_id=29
+goad-30-srv02 ansible_host=100.65.2.153 network_id=30
+goad-31-srv02 ansible_host=100.65.2.181 network_id=31
+goad-32-srv02 ansible_host=100.65.2.52 network_id=32
+goad-33-srv02 ansible_host=100.65.6.131 network_id=33
+goad-34-srv02 ansible_host=100.65.3.59 network_id=34
+goad-35-srv02 ansible_host=100.65.2.44 network_id=35
+goad-36-srv02 ansible_host=100.65.4.132 network_id=36
+goad-37-srv02 ansible_host=100.65.5.90 network_id=37
+goad-38-srv02 ansible_host=100.65.2.185 network_id=38
+goad-39-srv02 ansible_host=100.65.4.75 network_id=39
+goad-40-srv02 ansible_host=100.65.6.146 network_id=40
+
+[windows_srv03]
+goad-1-srv03 ansible_host=100.65.5.151 network_id=1
+goad-2-srv03 ansible_host=100.65.2.220 network_id=2
+goad-3-srv03 ansible_host=100.65.3.46 network_id=3
+goad-4-srv03 ansible_host=100.65.5.129 network_id=4
+goad-5-srv03 ansible_host=100.65.2.138 network_id=5
+goad-6-srv03 ansible_host=100.65.3.106 network_id=6
+goad-7-srv03 ansible_host=100.65.3.105 network_id=7
+goad-8-srv03 ansible_host=100.65.3.32 network_id=8
+goad-9-srv03 ansible_host=100.65.5.75 network_id=9
+goad-10-srv03 ansible_host=100.65.5.183 network_id=10
+goad-11-srv03 ansible_host=100.65.5.26 network_id=11
+goad-12-srv03 ansible_host=100.65.3.95 network_id=12
+goad-13-srv03 ansible_host=100.65.2.209 network_id=13
+goad-14-srv03 ansible_host=100.65.3.65 network_id=14
+goad-15-srv03 ansible_host=100.65.3.125 network_id=15
+goad-16-srv03 ansible_host=100.65.3.230 network_id=16
+goad-17-srv03 ansible_host=100.65.2.228 network_id=17
+goad-18-srv03 ansible_host=100.65.2.101 network_id=18
+goad-19-srv03 ansible_host=100.65.2.245 network_id=19
+goad-20-srv03 ansible_host=100.65.5.10 network_id=20
+goad-21-srv03 ansible_host=100.65.4.187 network_id=21
+goad-22-srv03 ansible_host=100.65.2.14 network_id=22
+goad-23-srv03 ansible_host=100.65.5.232 network_id=23
+goad-24-srv03 ansible_host=100.65.4.128 network_id=24
+goad-25-srv03 ansible_host=100.65.3.9 network_id=25
+goad-26-srv03 ansible_host=100.65.2.251 network_id=26
+goad-27-srv03 ansible_host=100.65.5.27 network_id=27
+goad-28-srv03 ansible_host=100.65.5.187 network_id=28
+goad-29-srv03 ansible_host=100.65.2.157 network_id=29
+goad-30-srv03 ansible_host=100.65.3.163 network_id=30
+goad-31-srv03 ansible_host=100.65.3.134 network_id=31
+goad-32-srv03 ansible_host=100.65.4.248 network_id=32
+goad-33-srv03 ansible_host=100.65.4.231 network_id=33
+goad-34-srv03 ansible_host=100.65.5.164 network_id=34
+goad-35-srv03 ansible_host=100.65.3.22 network_id=35
+goad-36-srv03 ansible_host=100.65.4.157 network_id=36
+goad-37-srv03 ansible_host=100.65.2.37 network_id=37
+goad-38-srv03 ansible_host=100.65.3.118 network_id=38
+goad-39-srv03 ansible_host=100.65.5.86 network_id=39
+goad-40-srv03 ansible_host=100.65.2.227 network_id=40
+
+[windows_domain_controllers:children]
+windows_dc01
+windows_dc02
+windows_dc03
+
+[windows_servers:children]
+windows_srv02
+windows_srv03
+
+[windows:children]
+windows_domain_controllers
+windows_servers
+
+[windows:vars]
+ansible_user=cyberrange
+ansible_password=Cyberrange123!
+ansible_connection=winrm
+ansible_winrm_transport=ntlm
+ansible_winrm_server_cert_validation=ignore
+ansible_port=5986
+ansible_winrm_scheme=https
+# WinRM over SOCKS5 proxy
+ansible_winrm_proxy=socks5h://ssh.cyberrange.rit.edu:1080
+# Disable become - WinRM doesn't support privilege escalation via sudo
+become=false
+
+# Network information from Terraform
+# Total GOAD instances: 40
+# Total deployment boxes: 40
+# Total Kali boxes: 40
+# Total Windows VMs: 200
